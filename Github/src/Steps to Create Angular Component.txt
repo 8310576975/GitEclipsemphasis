@@ -1,0 +1,71 @@
+
+a. Just go to Command line and navigate to 
+	E:\JavaMLA160
+b. ng new FirstAngularApp
+c. cd FirstAngularApp
+d. ng serve -------- This is to Launch the 
+			development server
+	This hosts our Angular applications
+	This server will typically be served on 
+	http://localhost:4200
+	Once we will visit this link -------- 
+	A default Angular application which was 
+	created by CLR will be opened.	
+	
+
+1. We need to declare every new component here in 
+app.module.ts which we want to add to our project.
+
+We can do like this
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+
+2. Create a new component  -------- Simply right click on app -------- 
+	new file
+	Say -------- user.component.ts	
+	We will write our own component code here
+
+3. First  ------ export class
+
+	export class UserComponent { }		
+
+	For now no code will be there
+
+4. After this we will implement a decorator
+	For that we need to import --------- 
+		import { Component } from ‘ @angular/core’ ;
+	Then we will add @Component as a decorator
+	In this we need to add selector, template
+	@Component({
+  		selector: 'app-user',
+  		template: `<H3> Hello </H3>
+      				<H4> May I know your Name : </H4>
+  			  `
+
+	})
+
+5. Go to app.module.ts -------- In the declarations area --- 
+	add following
+		import { UserComponent } from './user.component'
+
+6. Now go to app.component.html file and add <app-user> element.
+
+
+
+
+
+
+
+
+
+
